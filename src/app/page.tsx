@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
 import Calculation from '../api/calculation';
@@ -49,20 +49,13 @@ export default function Home() {
   })
 }
 
-const textInput: any = useRef(null);
-function allClear() {
-  console.log(textInput.current.value);
-  // calculator.clear()
-  // calculator.updateDisplay()
-}
   return (
     <div  className={`calculator-grid`}>
       <div className={`output`}>
         <div data-previous-operand className={`previous-operand`}></div>
         <div data-current-operand className={`current-operand`}></div>
-        <input type="text" ref={textInput} />
       </div>
-      <button  onClick={allClear} data-all-clear className={`span-two`}>AC</button>
+      <button data-all-clear className={`span-two`}>AC</button>
       <button data-delete>DEL</button>
       <button data-operation>÷</button>
       <button data-number>1</button>
