@@ -11,6 +11,10 @@ export default class Calculation {
       this.currentOperandTextElement = currentOperandTextElement
       this.clear()
     }
+
+    testAdd(a: number, b: number){
+      return a + b;
+    }
   
     clear() {
       this.currentOperand = '';
