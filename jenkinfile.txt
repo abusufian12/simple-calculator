@@ -4,16 +4,19 @@ pipeline{
         stage("git"){
             steps{
                 git branch: 'main', url: 'https://github.com/abusufian12/simple-calculator.git'
+            }
+        }
+        
+        stage("install"){
+            steps{
                 sh 'npm install'
             }
         }
         
-        //stage('Run tests') {
-          //steps {
-            // Run Jest tests
-            // Generate test reports (e.g., JUnit XML or HTML reports)
-            // Optionally, calculate code coverage and generate coverage reports
-          //}
-        //}
+        stage("test"){
+            steps{
+                sh 'npm test'
+            }
+        }
     }
 }
