@@ -1,3 +1,5 @@
+
+/* calculator style */
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: Gotham Rounded, sans-serif;
@@ -7,7 +9,6 @@
 body {
   padding: 0;
   margin: 0;
-  /* background: linear-gradient(to right, #263136, #7700ffa2); */
   background:#437a8ba2;
 }
 
