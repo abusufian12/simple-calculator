@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("git"){
             steps{
-                git 'https://github.com/abusufian12/simple-calculator.git'
+                git branch: 'main', url: 'https://github.com/abusufian12/simple-calculator.git'
                 sh 'npm install'
             }
         }
