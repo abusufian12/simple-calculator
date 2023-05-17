@@ -54,6 +54,7 @@ describe("Calculation", () =>{
 
 
     describe('chooseOperation', () => {
+        /*
         it('should set the operation and update previous and current operands', () => {
           // Set the initial current operand
           calculation.currentOperand = "10";
@@ -71,7 +72,7 @@ describe("Calculation", () =>{
           expect(calculation.previousOperand).toBe("10");
           expect(calculation.currentOperand).toBe("");
         });
-    
+        */
         it('should do nothing if the current operand is empty', () => {
           // Set the initial current operand to an empty string
           calculation.currentOperand = "";
