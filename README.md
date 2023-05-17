@@ -12,8 +12,36 @@ pnpm dev
 
 Open [http://localhost:3000]
 
+## If in docker run different port then
+
+1. need to chagne port number on package.json file :
+
+ "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "next lint",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+
+## and then build and run 
+
+sudo docker build -t simple-calculator .
+
+sudo docker run -dp 3001:3001 simple-calculator
+
 You can start editing the page by modifying `app/page.tsx`.
 
+## some docker command:
+
+docker ps 
+
+docker ps -a
+
+docker stop containerId
+
+docker start image name
 
 # simple-calculator
 
