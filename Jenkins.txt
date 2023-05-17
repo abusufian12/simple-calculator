@@ -1,0 +1,22 @@
+pipeline{
+    agent any
+    stages{
+        stage("git"){
+            steps{
+                git branch: 'main', url: 'https://github.com/abusufian12/simple-calculator.git'
+            }
+        }
+        
+        stage("install"){
+            steps{
+                sh 'npm install'
+            }
+        }
+        
+        stage("test"){
+            steps{
+                sh 'npm test'
+            }
+        }
+    }
+}
